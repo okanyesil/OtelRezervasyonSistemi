@@ -17,7 +17,7 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
-	
+
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
@@ -53,7 +53,7 @@ ul#lang_mobile li:last-child{
 a#purchase, a#more_demos{display:none;}
 }
 
-/* Extra Small Devices, Phones */ 
+/* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 #logo img {width:120px; height:auto;}
 .top_in h3{font-size:21px; top:20px; left:80px;}
@@ -73,8 +73,8 @@ a#purchase, a#more_demos{display:none;}
 #map {height:250px;}
 }
 
-/* Extra extra Small Devices */ 
+/* Extra extra Small Devices */
 @media only screen and (max-width : 320px) {
-	
+
 
 }

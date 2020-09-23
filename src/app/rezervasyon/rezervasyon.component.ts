@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {Store} from '@ngxs/store';
+import {Select, Store} from '@ngxs/store';
 import {AddKonaklamaBilgileri} from '../../actions/konaklamaSuresi.model';
 import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {HotelState} from '../../states/hotel.state';
+import {Observable} from 'rxjs';
+import {HotelInfo} from '../../Models/hotelInfo';
+import {map} from 'rxjs/operators';
 
 
 
@@ -12,6 +16,8 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./rezervasyon.component.css']
 })
 export class RezervasyonComponent implements OnInit {
+  @Select(HotelState.getHotel)
+  hotelDetail$: Observable<HotelInfo>;
   firtDate: any;
   secondaDate: any;
   diffInDays: number;
@@ -45,6 +51,15 @@ export class RezervasyonComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.childrenAgeInformation.value);
+  }
+  get hotelPhone$() {
+    return this.hotelDetail$.pipe(map(value => value.Phone));
+  }
+  get hotelSupportTime$() {
+    return this.hotelDetail$.pipe(map(value => value.SupportTime));
+  }
+  tiklandi() {
+    console.log('tiklandi');
   }
 
 }

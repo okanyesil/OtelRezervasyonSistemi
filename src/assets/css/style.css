@@ -1,10 +1,10 @@
 /*
-Theme Name: Splendida 
+Theme Name: Splendida
 Theme URI: http://www.ansonika.com/splendida/
 Author: Ansonika
 Author URI: http://themeforest.net/user/Ansonika/
 
-[Table of contents] 
+[Table of contents]
 
 1. SITE STRUCTURE and TYPOGRAPHY
 - 1.1 Typography
@@ -13,7 +13,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 
 2. CONTENT
 - 2.1 Booking wizard
-- 2.2 About section 
+- 2.2 About section
 - 2.3 Rooms section
 - 2.4  Contacts section
 
@@ -46,7 +46,7 @@ a:hover,a:focus {color: #6CC;text-decoration: none; outline:none;}
 
 .main_title{ text-align:center; font-size:16px;}
 .main_title h2{ font-weight:600; letter-spacing:-1px; font-size:30px; margin-bottom:0;margin-top:0; color:#333;}
-.main_title span{ display:block; width:40px; height:4px; background-color:#ededed; margin:auto;-webkit-border-radius: 5  px;-moz-border-radius: 5px;border-radius: 5px; margin-bottom:15px; }
+.main_title span{ display:block; width:40px; height:4px; background-color:#ededed; margin:auto;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin-bottom:15px; }
 .main_title p{ font-weight:300; font-size:20px}
 
 h3, h4, h5 {color:#333;}
@@ -56,7 +56,7 @@ h4.styled span {font-size:18px; display:block; margin-top:5px; color:#555; font-
 h4.styled sup {font-size:12px; color:#999;}
 
 #caption h1{font-size:46px; font-weight:400; margin:0; padding:0;}
-#caption h2{font-size:24; font-weight:300;margin:0; padding:0;}
+#caption h2{font-size:24px; font-weight:300;margin:0; padding:0;}
 
 .top_in h3{
 	position:absolute;
@@ -147,7 +147,7 @@ a.btn_1:hover, .btn_1:hover{
 .backward, .forward {
 	border:none;
 	color:#fff;
-	text-decoration:none; 
+	text-decoration:none;
 	display:inline-block;
 	cursor:pointer;
 	outline:none;
@@ -159,18 +159,18 @@ a.btn_1:hover, .btn_1:hover{
 	margin:0;
 	background:none;
 	color:#6CC;
-   } 
+   }
 button[disabled].backward, button[disabled].forward {display:none;}
- 
+
 .backward:before,.forward:before {
    	font-family: 'ElegantIcons';
     text-decoration: inherit;
 	font-weight:normal;
 	text-transform:none;
 	font-size:30px;
-} 
-.forward:before {content: "\3d";} 
-.backward:before{content: "\3c";} 
+}
+.forward:before {content: "\3d";}
+.backward:before{content: "\3c";}
 .backward:hover, .forward:hover {color:#333 !important;}
 
 a#more_demos{
@@ -206,6 +206,9 @@ a#purchase{
 a#purchase:hover, a#more_demos:hover{
 	text-decoration:none;
 	background-color:#111;
+}
+ul#lang_mobile li a {
+  color: #555;
 }
 
 /*-------- 1.3 Structure --------*/
@@ -260,7 +263,7 @@ ul.slides-container li img{
 }
 #caption {
 	position:fixed;
-	left:30px; 
+	left:30px;
 	bottom:30px;
 	color:#fff;
 	text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
@@ -329,7 +332,14 @@ nav ul.menu li a:hover{
 #bottom-wizard strong{
 	float:left;
 	margin-top:7px;
-	color:#999;
+	color:#999999!important;
+}
+#bottom-wizard strong a {
+  color: #555;
+}
+.col-xs-6 {
+  width: 50%;
+  padding: 6px 12px;
 }
 .ui-widget { }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {}
@@ -364,7 +374,7 @@ nav ul.menu li a:hover{
 	border:2px solid  #8dc63f;
 	color:#8dc63f;
 	padding:15px 25px;
-	text-decoration:none; 
+	text-decoration:none;
 	display:inline-block;
 	cursor:pointer;
 	font-weight:600;
@@ -372,7 +382,7 @@ nav ul.menu li a:hover{
 	outline:none;
 	background:#fff;
 	-webkit-transition: all 0.2s ease;
-	transition: all 0.2s ease; 
+	transition: all 0.2s ease;
 }
 #complete button:hover{background:#333; color:#fff; border:2px solid  #333;}
 
@@ -400,7 +410,7 @@ input.form-control, select.form-control, textarea.form-control {
 	font-weight:400;
 }
 input.form-control:focus, select.form-control:focus, textarea.form-control:focus  {
-  border-color:none;
+  border-color: none;
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -431,7 +441,7 @@ input.form-control:focus, select.form-control:focus, textarea.form-control:focus
 .dd-option-selected { background:#f9f9f9 !important; color:#444 !important;}
 .dd-option-image, .dd-selected-image { vertical-align:middle; float:left; margin-right:10px !important; max-width:64px;}
 .dd-image-right { float:right; margin-right:10px !important; margin-left:5px;}
-.dd-container{ position:relative;}​ 
+.dd-container{ position:relative;}​
 label.dd-selected-text { font-weight:normal !important; }
 .dd-option-text{ line-height:14px !important; color:#777 !important;}
 .dd-option-text:hover{ line-height:14px !important;}
@@ -452,7 +462,7 @@ label.error{
 	color:#fff;
 	font-weight:normal;
 	padding:0 6px;
-   } 
+   }
   label.error:after {
 	content: '';
 	position: absolute;
@@ -464,9 +474,9 @@ label.error{
 	z-index: 1;
 	bottom: -6px;
 	left: 20%;
-   } 
-   
- /*Quantity incrementer inpu*/   
+   }
+
+ /*Quantity incrementer inpu*/
 .qty-buttons{position:relative; width:100%; height:38px; display:inline-block  }
 input.qty {width:100%;}
 input.qtyminus, input.qtyplus{position:absolute; width:32px; height:22px; border: 1px solid #ececec; outline:none; cursor:pointer; -webkit-appearance: none; border-radius:0}
@@ -616,12 +626,12 @@ a.modal-close.booking:hover {
 
 /*-------- 2.4 Contacts section --------*/
 #map {
-	width:100%; 
-	height:350px; 
+	width:100%;
+	height:350px;
 }
 #get_directions {
 	padding:10px;
-	background-color:#333; 
+	background-color:#333;
 	margin-bottom:30px;
 }
 #get_directions .btn{
@@ -766,10 +776,10 @@ ul#reach_us li i{
 	font-weight:600;
 }
 .box_style_1 span {
-	display:block; 
-	width:40px; 
-	height:4px; 
-	background-color:#6CC; 
+	display:block;
+	width:40px;
+	height:4px;
+	background-color:#6CC;
 	margin:auto;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;

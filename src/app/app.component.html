@@ -5,37 +5,7 @@
       <app-rezervasyon></app-rezervasyon>
     </div>
     <div class="col-12 col-md-8 col-sm-12">
-      <div class="md-stepper-horizontal orange">
-        <div class="md-step active" (click)="clicked(1)" [ngClass]="{'active': selectedItem === 1}">
-          <div class="md-step-circle"><span>1</span></div>
-          <div class="md-step-title">Oda Seçimi</div>
-          <div class="md-step-bar-right d-none d-md-block d-lg-block d-xl-block"></div>
-        </div>
-        <div class="md-step" (click)="clicked(4)" [ngClass]="{'active': selectedItem === 4}" >
-          <div class="md-step-circle"><span>2</span></div>
-          <div class="md-step-title">Transfer</div>
-          <div class="md-step-optional">Optional</div>
-          <div class="md-step-bar-left d-none d-md-block d-lg-block d-xl-block"></div>
-          <div class="md-step-bar-right d-none d-md-block d-lg-block d-xl-block"></div>
-        </div>
-        <div class="md-step" (click)="clicked(2)" [ngClass]="{'active': selectedItem === 2}">
-          <div class="md-step-circle"><span>3</span></div>
-          <div class="md-step-title">Kisisel Bilgiler<br>Payment</div>
-          <div class="md-step-bar-left d-none d-md-block d-lg-block d-xl-block"></div>
-          <div class="md-step-bar-right d-none d-md-block d-lg-block d-xl-block"></div>
-        </div>
-        <div class="md-step" (click)="clicked(3)" [ngClass]="{'active': selectedItem === 3}">
-          <div class="md-step-circle"><span>4</span></div>
-          <div class="md-step-title">Onay</div>
-          <div class="md-step-bar-left d-none d-md-block d-lg-block d-xl-block"></div>
-        </div>
-      </div>
-      <app-icerik *ngIf="selectedItem === 1"></app-icerik>
-      <app-kisisel-bilgiler *ngIf="selectedItem === 2"></app-kisisel-bilgiler>
-      <app-onay *ngIf="selectedItem === 3"></app-onay>
-      <div *ngIf="selectedItem === 4">
-        <app-car></app-car>
-      </div>
+
     </div>
     <div class="col-md-4 col-sm-12 d-none d-md-block d-lg-block d-xl-block">
       <app-sepet></app-sepet>

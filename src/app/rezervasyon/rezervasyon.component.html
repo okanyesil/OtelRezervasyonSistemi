@@ -1,124 +1,52 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-      <mat-form-field appearance="fill">
-        <mat-label>Arrival Date - Departure Date</mat-label>
-        <mat-date-range-input [rangePicker]="picker">
-          <input matInput matStartDate placeholder="Start date" #arrival>
-          <input matInput matEndDate placeholder="End date" #departure>
-        </mat-date-range-input>
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-date-range-picker #picker></mat-date-range-picker>
-      </mat-form-field>
-    </div>
-    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3">
-
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-6 col-xl-2">
-      <mat-form-field appearance="fill">
-        <mat-label>Adult</mat-label>
-        <mat-select #adult [value]="'1'">
-          <mat-option value="0">0</mat-option>
-          <mat-option value="1">1</mat-option>
-          <mat-option value="2">2</mat-option>
-          <mat-option value="3">3</mat-option>
-          <mat-option value="4">4</mat-option>
-          <mat-option value="5">5</mat-option>
-          <mat-option value="6">6</mat-option>
-          <mat-option value="7">7</mat-option>
-          <mat-option value="8">8</mat-option>
-          <mat-option value="9">9</mat-option>
-          <mat-option value="10">10</mat-option>
-          <mat-option value="11">11</mat-option>
-          <mat-option value="12">12</mat-option>
-          <mat-option value="13">13</mat-option>
-          <mat-option value="14">14</mat-option>
-          <mat-option value="15">15</mat-option>
-          <mat-option value="16">16</mat-option>
-          <mat-option value="17">17</mat-option>
-          <mat-option value="18">18</mat-option>
-          <mat-option value="19">19</mat-option>
-          <mat-option value="20">20</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2">
-      <mat-form-field appearance="fill">
-        <mat-label>Children</mat-label>
-        <mat-select #children (selectionChange)="childrenCount(children.value)" [value]="'0'">
-          <mat-option value="0">0</mat-option>
-          <mat-option value="1">1</mat-option>
-          <mat-option value="2">2</mat-option>
-          <mat-option value="3">3</mat-option>
-          <mat-option value="4">4</mat-option>
-          <mat-option value="5">5</mat-option>
-          <mat-option value="6">6</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
-      <button class="btn btn-outline-success btn-block btn-group-lg" [disabled]="arrival.value === '' || departure.value === ''" (click)="otelAra(arrival.value, departure.value, adult.value, children.value)">Ara</button>
-    </div>
-
-  </div>
-  <form [formGroup]="childrenAgeInformation" (ngSubmit)="onSubmit()">
-  <div class="row">
-    <div class="col-md-12" *ngIf="children.value !== '0'">
-      <div class="alert alert-warning">
-        Lütfen Çocukların Yaşlarını Giriniz.
-      </div>
-    </div>
-    <div class="col-md-4" *ngFor="let control of childrenAgeInformation.controls; let i = index;">
-      <div class="row">
-        <div class="col-md-4">
-          {{i + 1}}.Çocuk
-          <mat-form-field appearance="fill">
-            <mat-label>Doğum Tarihi</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="{{i}}">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker startView="year"></mat-datepicker>
-          </mat-form-field>
-        </div>
-      </div>
-    </div>
-  </div>
-  </form>
-  <div id="middle-wizard">
-
-    <div class="step">
-      <div class="title">
-        <span>Booking Request</span>
-        <h3>Enter your booking details</h3>
-      </div>
-      <div class="form-group">
-        <input class="form-control required" type="text" name="check_in" id="check_in" placeholder="Check in">
-        <i class="icon-hotel-calendar_3"></i>
-      </div>
-      <div class="form-group">
-        <input class="form-control required" type="text" name="check_out" id="check_out" placeholder="Check out">
-        <i class="icon-hotel-calendar_3"></i>
-      </div>
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="form-group nomargin">
-            <div class="qty-buttons">
-              <input type="button" value="+" class="qtyplus" name="adults">
-              <input type="text" name="adults" id="adults" value="" class="qty form-control required" placeholder="Adults">
-              <input type="button" value="-" class="qtyminus" name="adults">
+<div id="wrapper">
+  <div id="main">
+    <div id="form_container">
+      <form id="wrapped">
+        <div id="middle-wizard">
+          <div class="step">
+            <div class="title">
+              <span>Booking Request</span>
+              <h3>Enter your booking details</h3>
             </div>
-          </div>
-        </div>
-        <div class="col-xs-6">
-          <div class="form-group nomargin">
-            <div class="qty-buttons">
-              <input type="button" value="+" class="qtyplus" name="child">
-              <input type="text" name="child" id="child" value="" class="qty form-control required" placeholder="Child">
-              <input type="button" value="-" class="qtyminus" name="child">
+            <div class="form-group">
+              <input class="form-control required" type="text" name="check_in" id="check_in" placeholder="Check in" #arrival>
+              <i class="icon-hotel-calendar_3"></i>
             </div>
-          </div>
+            <div class="form-group">
+              <input class="form-control required" type="text" name="check_out" id="check_out" placeholder="Check out" #departure>
+              <i class="icon-hotel-calendar_3"></i>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="form-group nomargin">
+                  <div class="qty-buttons">
+                    <input type="button" value="+" class="qtyplus" name="adults">
+                    <input type="text" name="adults" id="adults" value="" class="qty form-control required" placeholder="Adults">
+                    <input type="button" value="-" class="qtyminus" name="adults">
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6">
+                <div class="form-group nomargin">
+                  <div class="qty-buttons">
+                    <input type="button" value="+" class="qtyplus" name="child" (click)="tiklandi()">
+                    <input type="text" name="child" id="child" value="" class="qty form-control required" placeholder="Child">
+                    <input type="button" value="-" class="qtyminus" name="child">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- end step-->
+
         </div>
-      </div>
-    </div><!-- end step-->
+        <div id="bottom-wizard" class="clearfix">
+          <strong>Or call us <a href="tel://{{hotelPhone$ | async}}">{{hotelPhone$ | async}}</a></strong>
+          <button type="button" name="backward" class="backward"></button>
+          <button type="button" name="forward" class="forward"></button>
+        </div><!-- end bottom-wizard -->
+      </form>
+
+    </div>
 
   </div>
 </div>
