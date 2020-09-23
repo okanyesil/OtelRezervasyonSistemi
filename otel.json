@@ -1,0 +1,14 @@
+{
+  "hotel": {
+    "HotelName": "sunis kumkoy beach hotel",
+    "LogoURL": "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/logo.png",
+    "hotelPhoto": "https://images.unsplash.com/photo-1552515721-216a4c25c5fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    "Phone": "+90 850 7070600",
+    "SupportTime": "09:00-23:30",
+    "MainColor": "#ff8585",
+    "SecondaryColor": "#337ab7",
+    "province": "Antalya",
+    "district": "Alanya"
+    }
+}
+

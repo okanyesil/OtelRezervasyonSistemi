@@ -1,0 +1,46 @@
+{
+  "rooms": [
+    {
+      "RoomID": "1",
+      "RoomType": "Standart Kara Manzara",
+      "Price": "9.600,00",
+      "Netprice": "6.240,00",
+      "Type": "Ultra Herşey Dahil",
+      "images": [
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_405.jpg",
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_318.jpg",
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_318.jpg"
+      ],
+      "CancelPolicy": "Giriş tarihine 15 gün kala yapılan iptallerde misafirden tahsil edilen para koşulsuz iade edilir,\nGiriş tarihine 14-7 gün kala yapılan iptallerde %10 kesinti uygulanır,\nGiriş tarihine 6-3 gün kala yapılan iptallerde %25 kesinti uygulanır,\nGiriş tarihine 2-1 gün kala yapılan iptallerde %50 kesinti uygulanır,\nGiriş günü yapılan iptallerde %100 kesinti uygulanır.",
+      "Description": "Standart odalarımız 27 m2 alana sahiptir. Odalarımızda;Uydu yayınlı LCD TV, Balkon, Banyo duş kabini, Bornoz ( 2), Banyoda Telefon,Direkt Telefon,Wifi, Elektronik Kasa, Merkezi Klima, Minibar, Fön Makinası,Kozmetik Ayna, Enerji Tasarrufu Sistemi, Su Isıtıcı+Çay&Kahve set up, Zemin Laminant Parke"
+    },
+    {
+      "RoomID": "2",
+      "RoomType": "Standart Yandan Deniz Manzara",
+      "Price": "9.840,00",
+      "Netprice": "6.396,00",
+      "Type": "Ultra Herşey Dahil",
+      "images": [
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_405.jpg",
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_318.jpg",
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_318.jpg"
+      ],
+      "CancelPolicy": "Giriş tarihine 15 gün kala yapılan iptallerde misafirden tahsil edilen para koşulsuz iade edilir,\nGiriş tarihine 14-7 gün kala yapılan iptallerde %10 kesinti uygulanır,\nGiriş tarihine 6-3 gün kala yapılan iptallerde %25 kesinti uygulanır,\nGiriş tarihine 2-1 gün kala yapılan iptallerde %50 kesinti uygulanır,\nGiriş günü yapılan iptallerde %100 kesinti uygulanır.",
+      "Description": "Standart odalarımız 27 m2 alana sahiptir. Odalarımızda;Uydu yayınlı LCD TV, Balkon, Banyo duş kabini, Bornoz ( 2), Banyoda Telefon,Direkt Telefon,Wifi, Elektronik Kasa, Merkezi Klima, Minibar, Fön Makinası,Kozmetik Ayna, Enerji Tasarrufu Sistemi, Su Isıtıcı+Çay&Kahve set up, Zemin Laminant Parke"
+    },
+    {
+      "RoomID": "3",
+      "RoomType": "Standart Deniz Manzara",
+      "Price": "10.080,00",
+      "Netprice": "6.552,00",
+      "Type": "Ultra Herşey Dahil",
+      "images": [
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_405.jpg",
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_318.jpg",
+        "https://cdn.orsmod.com/userfiles/suniskumkoybeachhotel/room_1_318.jpg"
+      ],
+      "CancelPolicy": "Giriş tarihine 15 gün kala yapılan iptallerde misafirden tahsil edilen para koşulsuz iade edilir,\nGiriş tarihine 14-7 gün kala yapılan iptallerde %10 kesinti uygulanır,\nGiriş tarihine 6-3 gün kala yapılan iptallerde %25 kesinti uygulanır,\nGiriş tarihine 2-1 gün kala yapılan iptallerde %50 kesinti uygulanır,\nGiriş günü yapılan iptallerde %100 kesinti uygulanır.",
+      "Description": "Standart odalarımız 27 m2 alana sahiptir. Odalarımızda;Uydu yayınlı LCD TV, Balkon, Banyo duş kabini, Bornoz ( 2), Banyoda Telefon,Direkt Telefon,Wifi, Elektronik Kasa, Merkezi Klima, Minibar, Fön Makinası,Kozmetik Ayna, Enerji Tasarrufu Sistemi, Su Isıtıcı+Çay&Kahve set up, Zemin Laminant Parke"
+    }
+  ]
+}

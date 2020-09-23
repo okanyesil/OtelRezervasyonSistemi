@@ -1,0 +1,157 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-center">
+    Transfer Seçimi
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6">
+
+          <div class="row mb-3">
+            <div class="col-md-4">
+              Yetişkin
+              <select class="form-control" #yetiskin>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              Çocuk
+              <select class="form-control" #cocuk>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              Bebek
+              <select class="form-control" #bebek>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+        </div>
+        <div class="bg-light">
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <select class="form-control" #havaalani>
+                <option>Antalya, Antalya</option>
+                <option>Gazipasaairport, Alanya</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <select class="form-control" #trasfer>
+                <option>Sadece Geliş</option>
+                <option>Sadece Dönüş</option>
+                <option>Geliş - Dönüş</option>
+              </select>
+            </div>
+          </div>
+          <div class="alert alert-warning" *ngIf="false">
+            Seçilen Tarihler için Müsait Transfer Hizmeti Bulunamadı.
+          </div>
+          <div>
+            <i class="fa fa-car"></i><br>
+            500<i class="fa">&#xf195;</i><br>
+            <button class="btn btn-outline-primary btn-sm mr-2">Ayrıntılar</button>
+            <button class="btn btn-outline-success" (click)="open(havaalani.value, trasfer.value, yetiskin.value, cocuk.value,bebek.value)">
+              Seç
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" *ngIf="!ara">
+        <div class="alert alert-warning">
+          *Öncelikle transfer Seçiniz!
+        </div>
+      </div>
+      <div class="col-md-6" *ngIf="ara">
+        <div class="alert alert-info">
+          Uçak bilgilerinizin değişmesi durumunda lütfen e-mail veya telefon yoluyla bilgi veriniz...
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            Hava Alanı: <strong>{{airport}}</strong>
+          </div>
+          <div class="col-md-6">
+            Seçilen Transfer: <strong>Özel</strong>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <span *ngIf="adult !== '0'"><strong>{{adult}}</strong> Yetişkin</span>
+            <span *ngIf="children !== '0'"><strong>{{children}}</strong> Çocuk</span>
+            <span *ngIf="baby !== '0'"><strong>{{baby}}</strong> Bebek</span>
+          </div>
+          <div class="col-md-6 d-flex justify-content-end">
+            Fiyat: 550<i class="fa">&#xf195;</i>
+          </div>
+        </div>
+        <form [formGroup]="gelisBilgileri" (ngSubmit)="onSubmit()" *ngIf="transportation === 'Sadece Geliş' || transportation === 'Geliş - Dönüş' ">
+          <div class="d-flex justify-content-center">
+            <h4>Geliş Bilgileri</h4>
+          </div>
+          Hava Alanı: <input type="text" class="form-control" formControlName="havaalani"><br>
+          Havayolu Şirketi:
+          <input type="text" class="form-control" formControlName="havayoluSirketi"><br>
+          <div class="row">
+            <div class="col-md-4">
+              Uçuş Kodu
+              <input type="text" class="form-control" formControlName="ucusKodu">
+            </div>
+            <div class="col-md-4">
+              Uçuş Tarihi
+              <input type="text" class="form-control" formControlName="ucusTarihi">
+            </div>
+            <div class="col-md-4">
+              Uçuş Saati
+              <input type="text" class="form-control" formControlName="ucusSaati">
+            </div>
+          </div>
+        </form>
+
+        <form [formGroup]="donusBilgileri" (ngSubmit)="onSubmit()" *ngIf="transportation === 'Sadece Dönüş' || transportation === 'Geliş - Dönüş' ">
+          <div class="d-flex justify-content-center">
+            <h4>Dönüş Bilgileri</h4>
+          </div>
+          Hava Alanı: <input type="text" class="form-control" formControlName="havaalani"><br>
+          Havayolu Şirketi:
+          <input type="text" class="form-control" formControlName="havayoluSirketi"><br>
+          <div class="row mb-2">
+            <div class="col-md-4">
+              Uçuş Kodu
+              <input type="text" class="form-control" formControlName="ucusKodu">
+            </div>
+            <div class="col-md-4">
+              Uçuş Tarihi
+              <input type="text" class="form-control" formControlName="ucusTarihi">
+            </div>
+            <div class="col-md-4">
+              Uçuş Saati
+              <input type="text" class="form-control" formControlName="ucusSaati">
+            </div>
+          </div>
+        </form>
+        <div class="alert alert-info mt-2">
+         <i class="fa fa-info"></i> Uçuş bilgilerinizi transfer gününden en az 5 gün öncesinden tarafımıza bildirmeniz ricadır, aksi taktirde transferiniz iptal edilecektir.
+        </div>
+        <button class="btn btn-outline-danger mr-2" (click)="cancel()">Vazgeç</button>
+        <button class="btn btn-outline-success"
+                (click)="addToCart()"
+                [disabled]="(transportation === 'Sadece Geliş' && !gelisBilgileri.valid)
+                 || (transportation === 'Sadece Dönüş' && !donusBilgileri.valid)  ">Sepete Ekle</button>
+      </div>
+    </div>
+  </div>
+</div>

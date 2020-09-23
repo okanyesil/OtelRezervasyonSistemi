@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="bg-light">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Tek Yön</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Çift Yön</label>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          Yetişkin
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          Çocuk
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          Bebek
+          <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+      </div>
+      Nereden
+      <input type="text" class="form-control">
+      <div class="form-group">
+        <label class="mr-2">Geliş Tarihi:</label>
+        <input type="text" ngbDatepicker #d="ngbDatepicker" placeholder="yy-mm-dd" #girisTarihi/>
+        <button class="btn btn-outline" (click)="d.toggle()"><i class="fas fa-calendar-day"></i></button><br>
+      </div>
+      <div class="form-group">
+        <label class="mr-2">Dönüş Tarihi:</label>
+        <input type="text" ngbDatepicker #c="ngbDatepicker" placeholder="yy-mm-dd" #girisTarihi/>
+        <button class="btn btn-outline" (click)="c.toggle()"><i class="fas fa-calendar-day"></i></button><br>
+      </div>
+      <button class="btn btn-outline-success"> <i class="fa fa-list"></i> Uçuşları Listele</button>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="alert alert-info">
+      Öncelikle Uçuş bilgilerinizi seçerek uçuşları listelemelisiniz.
+    </div>
+  </div>
+</div>

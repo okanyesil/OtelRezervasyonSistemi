@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-6"><img src="{{hotelLogoUrl$ | async}}"> </div>
+    <div class="col-md-6 col-sm-6 col-6 d-flex justify-content-end">
+      <div class="change-color">
+        <i class="fas fa-phone-square"></i>
+        <a href="tel:{{hotelPhone$ | async}}" class="change-color kirmizi">Destek Hattı<br>({{hotelSupportTime$ | async}})
+          <div class="bigger change-color">{{hotelPhone$ | async}}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

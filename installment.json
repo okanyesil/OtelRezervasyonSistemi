@@ -1,0 +1,1516 @@
+{
+  "installment": [
+    {
+      "installmentID": "1",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "2",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "3",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "4",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "5",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "6",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "7",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "984,29₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "8",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "861,25₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "9",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "765,56₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "10",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "699,89₺",
+      "Toplam Tutar": "6.998,86₺"
+    },
+    {
+      "installmentID": "11",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "12",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "589,78₺",
+      "Toplam Tutar": "7.077,41₺"
+    },
+    {
+      "installmentID": "13",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "14",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "15",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "16",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.722,50₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "17",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.378,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "18",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.148,33₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "19",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "20",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "21",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "787,83₺",
+      "Toplam Tutar": "7.090,50₺"
+    },
+    {
+      "installmentID": "22",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "23",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "24",
+      "Bank": "Axess",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "25",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "26",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "27",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "28",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "29",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "30",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.174,63₺",
+      "Toplam Tutar": "7.047,78₺"
+    },
+    {
+      "installmentID": "31",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "32",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "33",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "794,57₺",
+      "Toplam Tutar": "7.151,13₺"
+    },
+    {
+      "installmentID": "34",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "35",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "36",
+      "Bank": "Paraf",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "37",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "38",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "39",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "40",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "41",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "42",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.160,85₺",
+      "Toplam Tutar": "6.965,10₺"
+    },
+    {
+      "installmentID": "43",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "44",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "45",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "788,68₺",
+      "Toplam Tutar": "7.098,08₺"
+    },
+    {
+      "installmentID": "46",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "714,29₺",
+      "Toplam Tutar": "7.142,86₺"
+    },
+    {
+      "installmentID": "47",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "48",
+      "Bank": "World",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "49",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "50",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "51",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "52",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "53",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "54",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.174,40₺",
+      "Toplam Tutar": "7.046,40₺"
+    },
+    {
+      "installmentID": "55",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "56",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "57",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "797,79₺",
+      "Toplam Tutar": "7.180,07₺"
+    },
+    {
+      "installmentID": "58",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "59",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "60",
+      "Bank": "Maximum",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "609,42₺",
+      "Toplam Tutar": "7.313,05₺"
+    },
+    {
+      "installmentID": "61",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "62",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "63",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "64",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.722,50₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "65",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.407,76₺",
+      "Toplam Tutar": "7.038,82₺"
+    },
+    {
+      "installmentID": "66",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.183,36₺",
+      "Toplam Tutar": "7.100,15₺"
+    },
+    {
+      "installmentID": "67",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.023,07₺",
+      "Toplam Tutar": "7.161,47₺"
+    },
+    {
+      "installmentID": "68",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "902,85₺",
+      "Toplam Tutar": "7.222,79₺"
+    },
+    {
+      "installmentID": "69",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "809,35₺",
+      "Toplam Tutar": "7.284,11₺"
+    },
+    {
+      "installmentID": "70",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "71",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "72",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "73",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "74",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "75",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "76",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.722,50₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "77",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.378,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "78",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.148,33₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "79",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.001,81₺",
+      "Toplam Tutar": "7.012,64₺"
+    },
+    {
+      "installmentID": "80",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "888,38₺",
+      "Toplam Tutar": "7.107,04₺"
+    },
+    {
+      "installmentID": "81",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "795,57₺",
+      "Toplam Tutar": "7.160,09₺"
+    },
+    {
+      "installmentID": "82",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "722,00₺",
+      "Toplam Tutar": "7.220,03₺"
+    },
+    {
+      "installmentID": "83",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "656,87₺",
+      "Toplam Tutar": "7.225,54₺"
+    },
+    {
+      "installmentID": "84",
+      "Bank": "Bonus",
+      "RoomType": "Standart Kara Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "605,40₺",
+      "Toplam Tutar": "7.264,82₺"
+    },
+    {
+      "installmentID": "85",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "86",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "87",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "88",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "89",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "90",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "91",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "984,29₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "92",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "861,25₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "93",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "765,56₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "94",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "699,89₺",
+      "Toplam Tutar": "6.998,86₺"
+    },
+    {
+      "installmentID": "95",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "96",
+      "Bank": "Finansbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "589,78₺",
+      "Toplam Tutar": "7.077,41₺"
+    },
+    {
+      "installmentID": "97",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "98",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "99",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "100",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.722,50₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "101",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.378,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "102",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.148,33₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "103",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "104",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "105",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "787,83₺",
+      "Toplam Tutar": "7.090,50₺"
+    },
+    {
+      "installmentID": "106",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "107",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "108",
+      "Bank": "Axess",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "109",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "110",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "111",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "112",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "113",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "114",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.174,63₺",
+      "Toplam Tutar": "7.047,78₺"
+    },
+    {
+      "installmentID": "115",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "116",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "117",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "794,57₺",
+      "Toplam Tutar": "7.151,13₺"
+    },
+    {
+      "installmentID": "118",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "119",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "120",
+      "Bank": "Paraf",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "121",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "122",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "123",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "124",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "125",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "126",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.160,85₺",
+      "Toplam Tutar": "6.965,10₺"
+    },
+    {
+      "installmentID": "127",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "128",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "129",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "788,68₺",
+      "Toplam Tutar": "7.098,08₺"
+    },
+    {
+      "installmentID": "130",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "714,29₺",
+      "Toplam Tutar": "7.142,86₺"
+    },
+    {
+      "installmentID": "131",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "132",
+      "Bank": "World",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "133",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "134",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "135",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "136",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "137",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "138",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.174,40₺",
+      "Toplam Tutar": "7.046,40₺"
+    },
+    {
+      "installmentID": "139",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "140",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "141",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "797,79₺",
+      "Toplam Tutar": "7.180,07₺"
+    },
+    {
+      "installmentID": "142",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "143",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "144",
+      "Bank": "Maximum",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "609,42₺",
+      "Toplam Tutar": "7.313,05₺"
+    },
+    {
+      "installmentID": "145",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "146",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "147",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "148",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.722,50₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "149",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.407,76₺",
+      "Toplam Tutar": "7.038,82₺"
+    },
+    {
+      "installmentID": "150",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.183,36₺",
+      "Toplam Tutar": "7.100,15₺"
+    },
+    {
+      "installmentID": "151",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.023,07₺",
+      "Toplam Tutar": "7.161,47₺"
+    },
+    {
+      "installmentID": "152",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "902,85₺",
+      "Toplam Tutar": "7.222,79₺"
+    },
+    {
+      "installmentID": "153",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "809,35₺",
+      "Toplam Tutar": "7.284,11₺"
+    },
+    {
+      "installmentID": "154",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "155",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "156",
+      "Bank": "Ziraatbank",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "-",
+      "Taksit Tutarı": "-",
+      "Toplam Tutar": "-"
+    },
+    {
+      "installmentID": "157",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "Peşin",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "6.890,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "158",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "2",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "3.445,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "159",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "3",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "2.296,67₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "160",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "4",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.722,50₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "161",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "5",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.378,00₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "162",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "6",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.148,33₺",
+      "Toplam Tutar": "6.890,00₺"
+    },
+    {
+      "installmentID": "163",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "7",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "1.001,81₺",
+      "Toplam Tutar": "7.012,64₺"
+    },
+    {
+      "installmentID": "164",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "8",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "888,38₺",
+      "Toplam Tutar": "7.107,04₺"
+    },
+    {
+      "installmentID": "165",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "9",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "795,57₺",
+      "Toplam Tutar": "7.160,09₺"
+    },
+    {
+      "installmentID": "166",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "10",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "722,00₺",
+      "Toplam Tutar": "7.220,03₺"
+    },
+    {
+      "installmentID": "167",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "11",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "656,87₺",
+      "Toplam Tutar": "7.225,54₺"
+    },
+    {
+      "installmentID": "168",
+      "Bank": "Bonus",
+      "RoomType": "Standart Deniz Manzara",
+      "Taksit": "12",
+      "İndirim Oranı": "0,35",
+      "Taksit Tutarı": "605,40₺",
+      "Toplam Tutar": "7.264,82₺"
+    }
+  ]
+}

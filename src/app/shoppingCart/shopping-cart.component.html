@@ -1,0 +1,43 @@
+<!-- Card -->
+  <div class="mb-3">
+    <div class="pt-4">
+
+      <h4 class="mb-3 d-flex justify-content-center"><i class="fa fa-shopping-cart"></i>Sepet</h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+          Giriş Tarihi
+          <span>{{girisTarihi$ | async}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+          Çıkış Tarihi
+          <span>{{cikisTarihi$ | async}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
+          Yetişkin ve Çocuk Sayısı
+          <span>{{yetiskinSayisi$ | async}} - {{cocukSayisi$ | async}}</span>
+        </li>
+      </ul>
+      <hr>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0" *ngFor="let item of (shoppingCart$ | async)">
+          {{item.odaTipi}}
+          <span>{{item.fiyat}}<i class="fa">&#xf195;</i><button class="btn btn-outline-danger btn-sm" (click)="deleteItem(item)">X</button></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center px-0" *ngFor="let ekstraHizmet of (ekstraHizmet$ | async)">
+          {{ekstraHizmet.hizmetAdi}}
+          <span>{{ekstraHizmet.fiyat}}<i class="fa">&#xf195;</i><button class="btn btn-outline-danger btn-sm" (click)="deleteHizmet(ekstraHizmet)">X</button></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
+          <div>
+            <strong>Sepet Tutarı</strong>
+          </div>
+          <span><strong>{{sepetTutari}} <i class="fa">&#xf195;</i></strong></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Card -->
+
+
+
+

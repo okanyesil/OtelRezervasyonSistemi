@@ -1,0 +1,253 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-center">
+        <i class="fa fa-home"></i>Misafir Bilgileri
+      </div>
+      <div class="card-body">
+        <form [formGroup]="costumerInformation" (ngSubmit)="onSubmit()">
+          <div *ngFor="let item of costumerInformation.controls; let i = index">
+            <div class="row">
+              <div class="col-12 col-md-12 col-xl-4 mb-2">
+                <select class="custom-select" formControlName="{{i}}">
+                  <option value="Bay" selected>Bay</option>
+                  <option value="Bayan">Bayan</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-12 col-xl-8">
+                <input type="text" class="col-12 form-control" placeholder="{{i+1}}. Yetişkin Ad Soyad*" formControlName="{{i}}">
+              </div>
+            </div>
+          </div>
+          <div *ngIf="childrenInformation.controls.length !== 0">
+            <div *ngFor="let item of childrenInformation.controls; let j = index">
+              <div class="row">
+                <div class="col-12 col-md-12 col-xl-4 mb-2">
+                  <select class="custom-select">
+                    <option value="Bay">Bay</option>
+                    <option value="Bayan">Bayan</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-12 col-xl-8">
+                  <input type="text" class="col-12 form-control" placeholder="{{j+1}}. Çocuk Ad Soyad*" formControlName="{{j}}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-header d-flex justify-content-center">
+        <i class="fa fa-credit-card"></i>Fatura ve İletişim Bilgileri
+      </div>
+      <div class="card-body">
+        <form [formGroup]="personelInformation" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-12 mb-2">
+              <label class="sr-only">Ad Soyad*</label>
+              <input type="text" placeholder="Ad Soyad" class="form-control" formControlName="adSoyad">
+              <div *ngIf="personelInformation.controls['adSoyad'].errors && personelInformation.controls['adSoyad'].errors.required && personelInformation.controls['adSoyad'].touched" class="alert alert-danger">
+                Bu alanı doldurmak Zorunludur.
+              </div>
+            </div>
+            <div class="col-12 col-xl-6">
+              <input type="text" placeholder="E-Posta Adresi" class="form-control" formControlName="email">
+              <div *ngIf="personelInformation.controls['email'].errors && personelInformation.controls['email'].errors.required && personelInformation.controls['email'].touched" class="alert alert-danger">
+                Bu alanı doldurmak Zorunludur.
+              </div>
+            </div>
+            <div class="col-12 col-xl-6 mt-2">
+                <label class="sr-only">Telefon</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">+ 90</div>
+                  </div>
+                  <input type="text" class="form-control" placeholder="5XXXXXXX" formControlName="telefon">
+                </div>
+              <div *ngIf="personelInformation.controls['telefon'].errors && personelInformation.controls['telefon'].errors.required && personelInformation.controls['telefon'].touched" class="alert alert-danger">
+                Bu alanı doldurmak Zorunludur.
+              </div>
+            </div>
+            <div class="col-12 col-xl-6">
+              <label>Fatura Tipi</label><br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Bireysel</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Kurumsal</label>
+                <div *ngIf="personelInformation.controls['tcKimlikNo'].errors && personelInformation.controls['tcKimlikNo'].errors.required && personelInformation.controls['tcKimlikNo'].touched" class="alert alert-danger">
+                  Bu alanı doldurmak Zorunludur.
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-xl-6">
+              <label class="sr-only">TC Kimlik No</label>
+              <input type="text" class="form-control" formControlName="tcKimlikNo" placeholder="TC Kimlik No">
+              <div *ngIf="personelInformation.controls['tcKimlikNo'].errors && personelInformation.controls['tcKimlikNo'].errors.required && personelInformation.controls['tcKimlikNo'].touched" class="alert alert-danger">
+                Bu alanı doldurmak Zorunludur.
+              </div>
+            </div>
+            Misafir Notu:<br>
+            <textarea class="form-control mb-3" aria-label="With textarea" formControlName="misafirNotu"></textarea>
+            <div class="alert alert-info">
+              İletişim bilgileriniz size rezervasyon detaylarını ulaştırmamız ve gerektiği taktirde size ulaşabilmemiz için önemlidir, lütfen bu alandaki bilgilerin doğruluğundan emin olunuz.
+            </div>
+            <div class="form-check my-3">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                En güncel kampanya ve indirimlerden haberdar olmak istiyorum.
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline-success" [disabled]="!personelInformation.valid"> Ekle</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header d-flex justify-content-center">
+        <i class="fa fa-plus"></i>Ekstra Hizmetler
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">Hizmet Adı</th>
+            <th scope="col">Hizmet Bilgisi</th>
+            <th scope="col">Hizmet Tutarı</th>
+            <th scope="col"></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>Oda İptal Garantisi</td>
+            <td><button class="btn btn-outline-primary btn-sm" (click)="openScrollableContent(longContent)">Ayrıntı</button></td>
+            <td>35,10 <i class="fa">&#xf195;</i></td>
+            <td><button class="btn btn-outline-success" (click)="hizmetEkle()">
+              <i class="d-none d-block d-sm-block d-md-none d-xl-none d-lg-none fa fa-plus"></i>
+              <span class="d-none d-md-block d-lg-block d-xl-block">Ekle</span></button></td>
+          </tr>
+          </tbody>
+        </table>
+        <ng-template #longContent let-modal>
+          <div class="modal-header">
+            <h4 class="modal-title">Hizmet Bilgisi</h4>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            İptal Garanti Paketi Nedir?
+
+            İptal garanti paketi, misafirlerin giriş gününe 3 gün kala ön koşulsuz ve kesintisiz olarak otel rezervasyonlarını iptal etme hakkına sahip olmalarını sağlayan önemli bir teminattır.
+
+            İptal garanti paketi bedeli ne kadardır?
+
+            İptal garanti paketi bedeli, toplam konaklama bedeli üzerinden uygulanacak primler aşağıda belirtilmiştir:
+
+            Minimum 15,00₺'den az olmamak koşuluyla
+            Konaklama bedelinin %1'lik tutarı olarak belirlenmiştir
+            İptal Garanti Paketi Nasıl Satın Alabilirim?
+
+            İptal Garanti Paketi, sitemiz üzerinden otel rezervasyonunuzla beraber online olarak satın alabilirsiniz.
+
+            İptal Garanti Paketi bedeliniz, konaklama bedelinize eklenerek kredi kartınızdan çekilecektir.
+
+            İptal Garanti Paketinin Geçerli Olmadığı Durumlar Nelerdir?
+
+            İptal Garanti Paketi yurt içi otellerinde geçerli olup, 3 gece ve üzeri konaklamalar içindir.
+            Rezervasyon tarihi ve isim değişiklikleri garanti kapsamında değildir.
+            Harp veya harp mahiyetindeki harekât, isyan, ayaklanma, ihtilal ve benzeri iç kargaşalar, terör, salgın hastalıklar ve doğal afetler garanti kapsamında değildir.
+            İptal Garanti Paketi Kapsamı ve Özel Şartları
+
+            İptal Garanti Paketi alan misafirler giriş gününe 3 gün kala ön koşulsuz ve kesintisiz olarak Otel rezervasyonlarını iptal etme hakkına sahiptirler.
+            İptal Garanti paketi iptal edilememekte ve bedel iadesi yapılmamamaktadır.s
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Kapat</button>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-header d-flex justify-content-center">
+        <i class="fa fa-money-bill-alt"></i> Ödeme
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-6 col-md-6">Ödenecek Tutar</div>
+          <div class="col-6 col-md-6 d-flex justify-content-end">{{sepetTutari}}<i class="fa">&#xf195;</i></div>
+        </div>
+        <hr>
+        <div class="alert alert-info">
+          Ödeme yapmak için aşağıdaki alanları Kredi Kartınızın üzerinde bulunan bilgiler ile aynı olacak şekilde doldurmalısınız.
+        </div>
+        <form [formGroup]="payInformation" (ngSubmit)="onSubmit()">
+          <div class="bg-light">
+            <div class="ml-2">
+              <label class="sr-only">Kart Numarası</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fa fa-credit-card"></i></div>
+                </div>
+                <input type="text" class="form-control" placeholder="Kart Numarası" formControlName="kartNumarasi">
+              </div>
+              <div *ngIf="payInformation.controls['kartNumarasi'].errors && payInformation.controls['kartNumarasi'].errors.required && payInformation.controls['kartNumarasi'].touched" class="alert alert-danger">
+                Bu alanı doldurmak Zorunludur.
+              </div>
+            </div>
+            <div class="ml-2">
+              <label class="sr-only">Kart Üzerindeki İsim</label>
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fa fa-user"></i></div>
+                </div>
+                <input type="text" class="form-control" placeholder="Kart Üzerindeki İsim" formControlName="kartUzerindekiIsim">
+              </div>
+            </div>
+            <div *ngIf="payInformation.controls['kartUzerindekiIsim'].errors && payInformation.controls['kartUzerindekiIsim'].errors.required && payInformation.controls['kartUzerindekiIsim'].touched" class="alert alert-danger">
+              Bu alanı doldurmak Zorunludur.
+            </div>
+            <div class="row">
+              <div class="col-12 col-xl-6">
+                <div class="ml-2">
+                  <label class="sr-only">Tarih</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="MM/YY" formControlName="kartAyYil">
+                  </div>
+                </div>
+                <div *ngIf="payInformation.controls['kartAyYil'].errors && payInformation.controls['kartAyYil'].errors.required && payInformation.controls['kartAyYil'].touched" class="alert alert-danger">
+                  Bu alanı doldurmak Zorunludur.
+                </div>
+              </div>
+              <div class="col-12 col-xl-6">
+                <div class="ml-2">
+                  <label class="sr-only">Güvenlik Kodu</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"><i class="fa fa-lock"></i></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Güvenlik Kodu" formControlName="kartGuvenlikKodu">
+                  </div>
+                  <div *ngIf="payInformation.controls['kartGuvenlikKodu'].errors && payInformation.controls['kartGuvenlikKodu'].errors.required && payInformation.controls['kartGuvenlikKodu'].touched" class="alert alert-danger">
+                    Bu alanı doldurmak Zorunludur.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <button class="btn btn-outline-success offset-7" routerLink="/check" [disabled]="!payInformation.valid"><i class="fa fa-credit-card"></i>Ödeme Yap</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

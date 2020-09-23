@@ -1,0 +1,76 @@
+{
+  "PriceList":[
+  {
+    "PricelistID": "1",
+    "RoomType": "Standart Kara Manzara",
+    "StartPeriod": "1.09.2020",
+    "EndPeriod": "18.09.2020",
+    "Price": "900,00₺",
+    "NetPrice": "585,00₺"
+  },
+  {
+    "PricelistID": "2",
+    "RoomType": "Standart Kara Manzara",
+    "StartPeriod": "19.09.2020",
+    "EndPeriod": "5.10.2020",
+    "Price": "800,00₺",
+    "NetPrice": "520,00₺"
+  },
+  {
+    "PricelistID": "3",
+    "RoomType": "Standart Kara Manzara",
+    "StartPeriod": "6.10.2020",
+    "EndPeriod": "30.10.2020",
+    "Price": "700,00₺",
+    "NetPrice": "455,00₺"
+  },
+  {
+    "PricelistID": "4",
+    "RoomType": "Standart Deniz Manzara",
+    "StartPeriod": "1.09.2020",
+    "EndPeriod": "18.09.2020",
+    "Price": "900,00₺",
+    "NetPrice": "585,00₺"
+  },
+  {
+    "PricelistID": "5",
+    "RoomType": "Standart Deniz Manzara",
+    "StartPeriod": "19.09.2020",
+    "EndPeriod": "5.10.2020",
+    "Price": "800,00₺",
+    "NetPrice": "520,00₺"
+  },
+  {
+    "PricelistID": "6",
+    "RoomType": "Standart Deniz Manzara",
+    "StartPeriod": "6.10.2020",
+    "EndPeriod": "30.10.2020",
+    "Price": "700,00₺",
+    "NetPrice": "455,00₺"
+  },
+  {
+    "PricelistID": "7",
+    "RoomType": "Standart Yandan Deniz Manzara",
+    "StartPeriod": "1.09.2020",
+    "EndPeriod": "18.09.2020",
+    "Price": "900,00₺",
+    "NetPrice": "585,00₺"
+  },
+  {
+    "PricelistID": "8",
+    "RoomType": "Standart Yandan Deniz Manzara",
+    "StartPeriod": "19.09.2020",
+    "EndPeriod": "5.10.2020",
+    "Price": "800,00₺",
+    "NetPrice": "520,00₺"
+  },
+  {
+    "PricelistID": "9",
+    "RoomType": "Standart Yandan Deniz Manzara",
+    "StartPeriod": "6.10.2020",
+    "EndPeriod": "30.10.2020",
+    "Price": "700,00₺",
+    "NetPrice": "455,00₺"
+  }
+]
+}
