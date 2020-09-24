@@ -22,6 +22,8 @@ export class RezervasyonComponent implements OnInit {
   secondaDate: any;
   diffInDays: number;
   model: NgbDateStruct;
+  children: number;
+  adult: number;
   childrenAgeInformation = this.fb.array([]);
   constructor(private store: Store, private fb: FormBuilder) {
   }
@@ -58,8 +60,33 @@ export class RezervasyonComponent implements OnInit {
   get hotelSupportTime$() {
     return this.hotelDetail$.pipe(map(value => value.SupportTime));
   }
-  tiklandi() {
-    console.log('tiklandi');
+  arttir() {
+    if (isNaN(this.children)) {
+      this.children = 0;
+    }
+    this.children += 1;
+  }
+  azalt() {
+    if (isNaN(this.children)) {
+      this.children = 0;
+    }
+    if (this.children !== 0) {
+      this.children -= 1;
+    }
+  }
+  adultArttir() {
+    if (isNaN(this.adult)) {
+      this.adult = 0;
+    }
+    this.adult += 1;
+  }
+  adultAzalt() {
+    if (isNaN(this.adult)) {
+      this.adult = 0;
+    }
+    if (this.adult !== 0) {
+      this.adult -= 1;
+    }
   }
 
 }
