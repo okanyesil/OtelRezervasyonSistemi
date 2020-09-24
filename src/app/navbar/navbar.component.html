@@ -1,13 +1,8 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-sm-6 col-6"><img src="{{hotelLogoUrl$ | async}}"> </div>
-    <div class="col-md-6 col-sm-6 col-6 d-flex justify-content-end">
-      <div class="change-color">
-        <i class="fas fa-phone-square"></i>
-        <a href="tel:{{hotelPhone$ | async}}" class="change-color kirmizi">Destek Hattı<br>({{hotelSupportTime$ | async}})
-          <div class="bigger change-color">{{hotelPhone$ | async}}</div>
-        </a>
-      </div>
-    </div>
-  </div>
+<div id="logo">
+    <img src="{{hotelLogoUrl$ | async}}" width="150" height="80" alt="Hotel" data-retina="true">
 </div>
+<ul id="lang_mobile">
+  <li><a href="#" id="active_m">TR</a></li>
+  <li><a href="#">EN</a></li>
+  <li><a href="#">RU</a></li>
+</ul>

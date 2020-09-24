@@ -62,7 +62,7 @@ export class AppComponent {
     }
   }
   clicked(sayi: number) {
-    if(sayi === 1) {
+    if (sayi === 1) {
       this.selectedItem = 1;
     }
     else if (sayi === 2) {
