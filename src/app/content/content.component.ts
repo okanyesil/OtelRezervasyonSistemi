@@ -44,6 +44,9 @@ export class ContentComponent implements OnInit {
   pricingTable$: Observable<PricingtableModel[]>;
   status = false;
   installmentStatus = false;
+  priceListStatus = false;
+  cancelStatus = false;
+  availbilityStatus = false;
   ngOnInit(): void {
     this.store.dispatch(new GetHotelInfo());
     this.store.dispatch(new GetKonaklamaBilgileri());
@@ -62,12 +65,6 @@ export class ContentComponent implements OnInit {
     this.store
       .dispatch(new AddShoppingItem({id: item.RoomID, odaTipi: item.RoomType, fiyat: item.Netprice}));
   }
-  openScrollableContent(longContent) {
-    this.modalService.open(longContent, { scrollable: true });
-  }
-  openLg(content) {
-    this.modalService.open(content, { size: 'lg' });
-  }
   statusToggle() {
     if (this.status === false) {
       this.status = true;
@@ -80,6 +77,27 @@ export class ContentComponent implements OnInit {
       this.installmentStatus = true;
     } else {
       this.installmentStatus = false;
+    }
+  }
+  priceListStatusToggle() {
+    if (this.priceListStatus === false) {
+      this.priceListStatus = true;
+    } else {
+      this.priceListStatus = false;
+    }
+  }
+  cancelStatusToggle() {
+    if (this.cancelStatus === false) {
+      this.cancelStatus = true;
+    } else {
+      this.cancelStatus = false;
+    }
+  }
+  availibilityStatusToggle() {
+    if (this.availbilityStatus === false) {
+      this.availbilityStatus = true;
+    } else {
+      this.availbilityStatus = false;
     }
   }
 
