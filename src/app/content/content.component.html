@@ -1,51 +1,246 @@
 <div *ngFor="let item of (roomList$ | async)">
 
-  <div class="container-fluid shadow mt-5" *ngIf="(girisTarihi$ | async) !== '' || (departureDate$ | async)" >
+  <div class="container-fluid shadow mt-5" *ngIf="(girisTarihi$ | async) !== '' || (departureDate$ | async)">
     <div class="row">
       <div class="col-12 col-xl-6">
         <ngb-carousel>
           <ng-template ngbSlide *ngFor="let image of item.images">
             <div class="picsum-img-wrapper">
-              <img class="w-100" src="{{image}}" >
+              <img class="w-100" src="{{image}}">
             </div>
           </ng-template>
         </ngb-carousel>
       </div>
-      <div class="col-12 col-xl-6" >
+      <div class="col-12 col-xl-6">
         <div class="row">
           <div class="col-12 col-md-12 d-flex justify-content-center">{{ item.RoomType }}</div>
         </div>
         <hr>
         <div class="col-xl-12">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus alias, commodi corporis, debitis ea facilis nesciunt nihil praesentium quasi repudiandae sunt voluptas voluptate. Dolorem exercitationem fugiat molestias nemo quibusdam!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus alias, commodi corporis, debitis ea
+          facilis nesciunt nihil praesentium quasi repudiandae sunt voluptas voluptate. Dolorem exercitationem fugiat
+          molestias nemo quibusdam!
           <div class="row">
             <div class="col-6 col-md-6">
-              <del>{{item.Price}}<i class="fa">&#xf195;</i></del><br>
+              <del>{{item.Price}}<i class="fa">&#xf195;</i></del>
+              <br>
               <strong>{{item.Netprice}}<i class="fa">&#xf195;</i></strong>
             </div>
             <div class="col-6 col-md-6">
               <button class="btn btn-outline-secondary" (click)="addToCart(item)">Sepete Ekle</button>
             </div>
           </div>
-              <ul class="additional_info mt-xl-5">
-                <li><i class=" icon-hotel-double_bed"></i></li>
-                <li><i class="icon-hotel-wifi"></i></li>
-                <li><i class="icon-hotel-tv"></i></li>
-                <li><i class="icon-hotel-shower"></i></li>
-                <li><i class="icon-hotel-hairdryer"></i></li>
-                <li><i class="icon-hotel-condition"></i></li>
-              </ul>
-          <button class="btn btn-outline-secondary btn-block" (click)="statusToggle()">Oda Detay</button>
+          <ul class="additional_info mt-xl-5">
+            <li><i class=" icon-hotel-double_bed"></i></li>
+            <li><i class="icon-hotel-wifi"></i></li>
+            <li><i class="icon-hotel-tv"></i></li>
+            <li><i class="icon-hotel-shower"></i></li>
+            <li><i class="icon-hotel-hairdryer"></i></li>
+            <li><i class="icon-hotel-condition"></i></li>
+          </ul>
+          <button class="btn btn-outline-secondary btn-block" (click)="statusToggle()">Ödeme Detay</button>
         </div>
       </div>
     </div>
     <div class="row mt-2" *ngIf="status">
-      <div class="col-4 col-md-4"><button class="btn btn-outline-secondary">Müsaitlik</button></div>
-      <div class="col-4 col-md-4"><button class="btn btn-outline-secondary">Fiyat Tablosu</button></div>
-      <div class="col-4 col-md-4"><button class="btn btn-outline-secondary">Taksit Seçenekleri</button></div>
-      <div>
-
+      <div class="col-4 col-md-4">
+        <button class="btn btn-outline-secondary">Müsaitlik</button>
       </div>
+      <div class="col-4 col-md-4">
+        <button class="btn btn-outline-secondary">Fiyat Tablosu</button>
+      </div>
+      <div class="col-4 col-md-4">
+        <button class="btn btn-outline-secondary" (click)="installementStatusToggle()">Taksit Seçenekleri</button>
+      </div>
+      <div>
+        <!--Pricing Table-->
+        <div *ngIf="false">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Tarih</th>
+              <th scope="col">Açıklama</th>
+              <th scope="col">Fiyat</th>
+              <th scope="col">Net Fiyat</th>
+              <th scope="col">İndirim</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let price of (pricingTable$ | async)">
+            <tr *ngIf="price.RoomType === item.RoomType">
+              <td>{{price.Date}}</td>
+              <td>{{price.Description}}</td>
+              <td>{{price.Price}}</td>
+              <td>{{price.NetPrice}}</td>
+              <td>{{price.Discount}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Taksit Seçenekleri-->
+        <div class="row mt-2" *ngIf="installmentStatus">
+          <div class="col-md-12 d-flex justify-content-end">
+            <i class="icon-close" (click)="installementStatusToggle()"></i>
+          </div>
+          <div class="col-md-6">
+            <div class=" alert alert-info d-flex justify-content-center"><img
+              src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/cardfinans.png"></div>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">Taksit</th>
+                <th scope="col">İndirim Oranı</th>
+                <th scope="col">Taksit Tutarı</th>
+                <th scope="col">Toplam Tutar</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let installment of (installment$ | async)">
+              <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Finansbank'">
+                <td>{{installment.Taksit}}</td>
+                <td>{{installment["İndirim Oranı"]}}</td>
+                <td>{{installment["Taksit Tutarı"]}}</td>
+                <td>{{installment["Toplam Tutar"]}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-6">
+            <div class="alert alert-warning d-flex justify-content-center"><img
+              src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/axess.png"></div>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">Taksit</th>
+                <th scope="col">İndirim Oranı</th>
+                <th scope="col">Taksit Tutarı</th>
+                <th scope="col">Toplam Tutar</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let installment of (installment$ | async)">
+              <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Axess'">
+                <td>{{installment.Taksit}}</td>
+                <td>{{installment["İndirim Oranı"]}}</td>
+                <td>{{installment["Taksit Tutarı"]}}</td>
+                <td>{{installment["Toplam Tutar"]}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-6">
+            <div class="alert alert-warning d-flex justify-content-center"><img
+              src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/paraf.png"></div>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">Taksit</th>
+                <th scope="col">İndirim Oranı</th>
+                <th scope="col">Taksit Tutarı</th>
+                <th scope="col">Toplam Tutar</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let installment of (installment$ | async)">
+              <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Paraf'">
+                <td>{{installment.Taksit}}</td>
+                <td>{{installment["İndirim Oranı"]}}</td>
+                <td>{{installment["Taksit Tutarı"]}}</td>
+                <td>{{installment["Toplam Tutar"]}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-6">
+            <div class="alert alert-warning d-flex justify-content-center"><img
+              src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/world.png"></div>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">Taksit</th>
+                <th scope="col">İndirim Oranı</th>
+                <th scope="col">Taksit Tutarı</th>
+                <th scope="col">Toplam Tutar</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let installment of (installment$ | async)">
+              <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'World'">
+                <td>{{installment.Taksit}}</td>
+                <td>{{installment["İndirim Oranı"]}}</td>
+                <td>{{installment["Taksit Tutarı"]}}</td>
+                <td>{{installment["Toplam Tutar"]}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-6">
+            <div class="alert alert-warning d-flex justify-content-center"><img
+              src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/maximum.png"></div>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">Taksit</th>
+                <th scope="col">İndirim Oranı</th>
+                <th scope="col">Taksit Tutarı</th>
+                <th scope="col">Toplam Tutar</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let installment of (installment$ | async)">
+              <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Maximum'">
+                <td>{{installment.Taksit}}</td>
+                <td>{{installment["İndirim Oranı"]}}</td>
+                <td>{{installment["Taksit Tutarı"]}}</td>
+                <td>{{installment["Toplam Tutar"]}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-6">
+            <div class="alert alert-warning d-flex justify-content-center"><img
+              src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/ziraat.png"></div>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">Taksit</th>
+                <th scope="col">İndirim Oranı</th>
+                <th scope="col">Taksit Tutarı</th>
+                <th scope="col">Toplam Tutar</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let installment of (installment$ | async)">
+              <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Ziraatbank'">
+                <td>{{installment.Taksit}}</td>
+                <td>{{installment["İndirim Oranı"]}}</td>
+                <td>{{installment["Taksit Tutarı"]}}</td>
+                <td>{{installment["Toplam Tutar"]}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-6">
+            <div class="alert alert-warning d-flex justify-content-center"><img
+              src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/bonus.png"></div>
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">Taksit</th>
+                <th scope="col">İndirim Oranı</th>
+                <th scope="col">Taksit Tutarı</th>
+                <th scope="col">Toplam Tutar</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let installment of (installment$ | async)">
+              <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Bonus'">
+                <td>{{installment.Taksit}}</td>
+                <td>{{installment["İndirim Oranı"]}}</td>
+                <td>{{installment["Taksit Tutarı"]}}</td>
+                <td>{{installment["Toplam Tutar"]}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
     </div>
   </div>
 </div>

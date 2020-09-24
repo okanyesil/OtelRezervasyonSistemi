@@ -43,6 +43,7 @@ export class ContentComponent implements OnInit {
   @Select(PricingTableState.getPricing)
   pricingTable$: Observable<PricingtableModel[]>;
   status = false;
+  installmentStatus = false;
   ngOnInit(): void {
     this.store.dispatch(new GetHotelInfo());
     this.store.dispatch(new GetKonaklamaBilgileri());
@@ -72,6 +73,13 @@ export class ContentComponent implements OnInit {
       this.status = true;
     } else {
       this.status = false;
+    }
+  }
+  installementStatusToggle() {
+    if (this.installmentStatus === false) {
+      this.installmentStatus = true;
+    } else {
+      this.installmentStatus = false;
     }
   }
 
