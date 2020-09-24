@@ -263,7 +263,7 @@ ul.slides-container li img{
 }
 #caption {
 	position:fixed;
-	left:30px;
+	right:30px;
 	bottom:30px;
 	color:#fff;
 	text-shadow: 5px 5px 20px rgba(0, 0, 0, 1);

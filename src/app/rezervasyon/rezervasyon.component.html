@@ -36,15 +36,17 @@
                 </div>
               </div>
             </div>
+            <button class="btn btn-outline-secondary btn-block" (click)="otelAra(arrival.value, departure.value, adult.toString(), children.toString())">Ara</button>
           </div><!-- end step-->
-
         </div>
         <div id="bottom-wizard" class="clearfix">
           <strong>Or call us <a href="tel://{{hotelPhone$ | async}}">{{hotelPhone$ | async}}</a></strong>
+        </div><!-- end bottom-wizard -->
+        <div class="d-flex justify-content-center">
           <button type="button" name="backward" class="backward"></button>
           <span>Oda Seçimi</span>
-          <button type="button" name="forward" class="forward" (click)="otelAra(arrival.value, departure.value, adult.toString(), children.toString())"></button>
-        </div><!-- end bottom-wizard -->
+          <button type="button" name="forward" class="forward" ></button>
+        </div>
       </form>
 
     </div>
