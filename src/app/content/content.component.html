@@ -1,327 +1,296 @@
 <div *ngFor="let item of (roomList$ | async)">
 
-  <div class="container-fluid shadow mt-5" *ngIf="(girisTarihi$ | async) !== '' || (departureDate$ | async)" >
+  <div class="container-fluid shadow mt-5" *ngIf="(girisTarihi$ | async) !== '' || (departureDate$ | async)">
     <div class="row">
-      <div class="col-12 col-xl-3 mt-5">
+      <div class="col-12 col-xl-6">
         <ngb-carousel>
           <ng-template ngbSlide *ngFor="let image of item.images">
             <div class="picsum-img-wrapper">
-              <img class="w-100" src="{{image}}" >
+              <img class="w-100" src="{{image}}">
             </div>
           </ng-template>
         </ngb-carousel>
-        <div class="d-flex justify-content-end">
-          <button class="btn btn-outline-primary btn-sm yerlestir" (click)="openLg(imgContent)"><i class="fas fa-search kucult"></i></button>
-        </div>
       </div>
-      <ng-template #imgContent let-modal>
-        <div class="modal-header">
-          <h4 class="modal-title">Oda Resimleri</h4>
-          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <ngb-carousel>
-            <ng-template ngbSlide *ngFor="let image of item.images">
-              <div class="picsum-img-wrapper">
-                <img src="{{image}}" >
-              </div>
-            </ng-template>
-          </ngb-carousel>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
-        </div>
-      </ng-template>
-      <div class="col-12 col-xl-9" >
+      <div class="col-12 col-xl-6">
         <div class="row">
-          <div class="col-6 col-md-4">{{ item.RoomType }}</div>
-          <div class="col-6 col-md-8 d-flex justify-content-end">
-            <button class="ml-1 btn btn-outline-danger btn-sm" (click)="openScrollableContent(roomType)"><i class="fa fa-bed"></i>Oda Özellikleri</button>
-          </div>
+          <div class="col-12 col-md-12 d-flex justify-content-center">{{ item.RoomType }}</div>
         </div>
-        <ng-template #roomType let-modal>
-          <div class="modal-header">
-            <h4 class="modal-title">Oda Özellikleri</h4>
-            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            {{ item.Description }}
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Kapat</button>
-          </div>
-        </ng-template>
         <hr>
-        <div class="row">
-          <div class="col-6 col-sm-6 col-md-6">
-            <button class="btn btn-outline-warning btn-sm" (click)="openScrollableContent(pricingTable)"> <i class="fa fa-calculator"></i>Hesaplama Tablosu</button><br>
-            <ng-template #pricingTable let-modal>
-              <div class="modal-header">
-                <h4 class="modal-title">Hesaplama Tablosu</h4>
-                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div>
-                  <table class="table table-striped" >
-                    <thead >
-                    <tr>
-                      <th scope="col">Tarih</th>
-                      <th scope="col">Açıklama</th>
-                      <th scope="col">Fiyat</th>
-                      <th scope="col">Net Fiyat</th>
-                      <th scope="col">İndirim</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngFor="let price of (pricingTable$ | async)">
-                    <tr *ngIf="price.RoomType === item.RoomType">
-                      <td>{{price.Date}}</td>
-                      <td>{{price.Description}}</td>
-                      <td>{{price.Price}}</td>
-                      <td>{{price.NetPrice}}</td>
-                      <td>{{price.Discount}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Kapat</button>
-              </div>
-            </ng-template>
-            <button class="btn btn-outline-success btn-sm mt-2" (click)="openScrollableContent(installment)"> <i class="fa fa-credit-card"></i>Taksit Seçenekleri</button><br>
-            <ng-template #installment let-modal>
-              <div class="modal-header">
-                <h4 class="modal-title">Taksit Seçenekleri</h4>
-                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div>
-                  <div class="alert alert-info d-flex justify-content-center"><img src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/cardfinans.png"></div>
-                  <table class="table table-striped" >
-                    <thead >
-                    <tr>
-                      <th scope="col">Taksit</th>
-                      <th scope="col">İndirim Oranı</th>
-                      <th scope="col">Taksit Tutarı</th>
-                      <th scope="col">Toplam Tutar</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngFor="let installment of (installment$ | async)">
-                    <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Finansbank'">
-                      <td>{{installment.Taksit}}</td>
-                      <td>{{installment["İndirim Oranı"]}}</td>
-                      <td>{{installment["Taksit Tutarı"]}}</td>
-                      <td>{{installment["Toplam Tutar"]}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div>
-                  <div class="alert alert-warning d-flex justify-content-center"><img src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/axess.png"></div>
-                  <table class="table table-striped" >
-                    <thead >
-                    <tr>
-                      <th scope="col">Taksit</th>
-                      <th scope="col">İndirim Oranı</th>
-                      <th scope="col">Taksit Tutarı</th>
-                      <th scope="col">Toplam Tutar</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngFor="let installment of (installment$ | async)">
-                    <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Axess'">
-                      <td>{{installment.Taksit}}</td>
-                      <td>{{installment["İndirim Oranı"]}}</td>
-                      <td>{{installment["Taksit Tutarı"]}}</td>
-                      <td>{{installment["Toplam Tutar"]}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div>
-                  <div class="alert alert-warning d-flex justify-content-center"><img src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/paraf.png"></div>
-                  <table class="table table-striped" >
-                    <thead >
-                    <tr>
-                      <th scope="col">Taksit</th>
-                      <th scope="col">İndirim Oranı</th>
-                      <th scope="col">Taksit Tutarı</th>
-                      <th scope="col">Toplam Tutar</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngFor="let installment of (installment$ | async)">
-                    <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Paraf'">
-                      <td>{{installment.Taksit}}</td>
-                      <td>{{installment["İndirim Oranı"]}}</td>
-                      <td>{{installment["Taksit Tutarı"]}}</td>
-                      <td>{{installment["Toplam Tutar"]}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div>
-                  <div class="alert alert-warning d-flex justify-content-center"><img src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/world.png"></div>
-                  <table class="table table-striped" >
-                    <thead >
-                    <tr>
-                      <th scope="col">Taksit</th>
-                      <th scope="col">İndirim Oranı</th>
-                      <th scope="col">Taksit Tutarı</th>
-                      <th scope="col">Toplam Tutar</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngFor="let installment of (installment$ | async)">
-                    <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'World'">
-                      <td>{{installment.Taksit}}</td>
-                      <td>{{installment["İndirim Oranı"]}}</td>
-                      <td>{{installment["Taksit Tutarı"]}}</td>
-                      <td>{{installment["Toplam Tutar"]}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div>
-                  <div class="alert alert-warning d-flex justify-content-center"><img src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/maximum.png"> </div>
-                  <table class="table table-striped" >
-                    <thead >
-                    <tr>
-                      <th scope="col">Taksit</th>
-                      <th scope="col">İndirim Oranı</th>
-                      <th scope="col">Taksit Tutarı</th>
-                      <th scope="col">Toplam Tutar</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngFor="let installment of (installment$ | async)">
-                    <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Maximum'">
-                      <td>{{installment.Taksit}}</td>
-                      <td>{{installment["İndirim Oranı"]}}</td>
-                      <td>{{installment["Taksit Tutarı"]}}</td>
-                      <td>{{installment["Toplam Tutar"]}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div>
-                  <div class="alert alert-warning d-flex justify-content-center"><img src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/ziraat.png"></div>
-                  <table class="table table-striped" >
-                    <thead >
-                    <tr>
-                      <th scope="col">Taksit</th>
-                      <th scope="col">İndirim Oranı</th>
-                      <th scope="col">Taksit Tutarı</th>
-                      <th scope="col">Toplam Tutar</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngFor="let installment of (installment$ | async)">
-                    <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Ziraatbank'">
-                      <td>{{installment.Taksit}}</td>
-                      <td>{{installment["İndirim Oranı"]}}</td>
-                      <td>{{installment["Taksit Tutarı"]}}</td>
-                      <td>{{installment["Toplam Tutar"]}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-                <div>
-                  <div class="alert alert-warning d-flex justify-content-center"><img src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/bonus.png"></div>
-                  <table class="table table-striped" >
-                    <thead >
-                    <tr>
-                      <th scope="col">Taksit</th>
-                      <th scope="col">İndirim Oranı</th>
-                      <th scope="col">Taksit Tutarı</th>
-                      <th scope="col">Toplam Tutar</th>
-                    </tr>
-                    </thead>
-                    <tbody *ngFor="let installment of (installment$ | async)">
-                    <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Bonus'">
-                      <td>{{installment.Taksit}}</td>
-                      <td>{{installment["İndirim Oranı"]}}</td>
-                      <td>{{installment["Taksit Tutarı"]}}</td>
-                      <td>{{installment["Toplam Tutar"]}}</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Kapat</button>
-              </div>
-            </ng-template>
-            <button class="btn btn-outline-primary btn-sm mt-2" (click)="openScrollableContent(priceList)"> <i class="fa fa-book"></i>Fiyat Listesi</button><br>
-            <ng-template #priceList let-modal>
-              <div class="modal-header">
-                <h4 class="modal-title">{{item.RoomType}}</h4>
-                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body" >
-                <table class="table table-striped">
-                  <thead>
-                  <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">Start Period</th>
-                    <th scope="col">EndPeriod</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Net Price</th>
-                  </tr>
-                  </thead>
-                  <tbody *ngFor="let list of (priceList$ | async)">
-                  <tr *ngIf="list.RoomType === item.RoomType">
-                    <td>{{list.PricelistID}}</td>
-                    <td>{{list.StartPeriod}}</td>
-                    <td>{{list.EndPeriod}}</td>
-                    <td>{{list.Price}}</td>
-                    <td>{{list.NetPrice}}</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Kapat</button>
-              </div>
-            </ng-template>
-            <button class="btn btn-outline-danger btn-sm my-2" (click)="openScrollableContent(iptalKosullari)"> <i class="fa fa-book-open"></i>İptal Koşullari</button><br>
-            <ng-template #iptalKosullari let-modal>
-              <div class="modal-header">
-                <h4 class="modal-title">İptal Koşulları</h4>
-                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                {{ item.CancelPolicy }}
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Kapat</button>
-              </div>
-            </ng-template>
-          </div>
-          <div class="col-6 col-sm-6 col-md-6 d-flex justify-content-end">
-            <div class="alert alert-warning">
-              Fiyatlar <br>
-              <del>{{item.Price}}<i class="fa">&#xf195;</i></del><br>
-              {{item.Netprice}}<i class="fa">&#xf195;</i><br>
-              <button class=" mt-2 btn btn-outline-primary" (click)="addToCart(item)">Sepete Ekle</button>
+        <div class="col-xl-12">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus alias, commodi corporis, debitis ea
+          facilis nesciunt nihil praesentium quasi repudiandae sunt voluptas voluptate. Dolorem exercitationem fugiat
+          molestias nemo quibusdam!
+          <div class="row">
+            <div class="col-6 col-md-6">
+              <del>{{item.Price}}<i class="fa">&#xf195;</i></del>
+              <br>
+              <strong>{{item.Netprice}}<i class="fa">&#xf195;</i></strong>
+            </div>
+            <div class="col-6 col-md-6">
+              <button class="btn btn-outline-secondary" (click)="addToCart(item)">Sepete Ekle</button>
             </div>
           </div>
+          <ul class="additional_info mt-xl-5">
+            <li><i class=" icon-hotel-double_bed"></i></li>
+            <li><i class="icon-hotel-wifi"></i></li>
+            <li><i class="icon-hotel-tv"></i></li>
+            <li><i class="icon-hotel-shower"></i></li>
+            <li><i class="icon-hotel-hairdryer"></i></li>
+            <li><i class="icon-hotel-condition"></i></li>
+          </ul>
+          <button class="btn btn-outline-secondary btn-block" (click)="statusToggle()">Ödeme Detay</button>
         </div>
       </div>
     </div>
+    <div class="row mt-2" *ngIf="status">
+      <div class="col-6 col-md-3">
+        <button class="btn btn-outline-secondary" (click)="availibilityStatusToggle()">Müsaitlik</button>
+      </div>
+      <div class="col-6 col-md-3">
+        <button class="btn btn-outline-secondary" (click)="cancelStatusToggle()">İptal Koşulları</button>
+      </div>
+      <div class="col-6 col-md-3">
+        <button class="btn btn-outline-secondary" (click)="priceListStatusToggle()">Fiyat Tablosu</button>
+      </div>
+      <div class="col-6 col-md-3">
+        <button class="btn btn-outline-secondary" (click)="installementStatusToggle()">Taksit Seçenekleri</button>
+      </div>
+    </div>
+    <!--Müsaitlik Tablosu-->
+    <div class="row mt-4" *ngIf="availbilityStatus">
+      <div class="col-md-12 d-flex justify-content-end">
+        <i class="icon-close" (click)="availibilityStatusToggle()"></i>
+      </div>
+      <div class="col-md-12">
+            <table class="table table-striped">
+              <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Start Period</th>
+                <th scope="col">EndPeriod</th>
+                <th scope="col">Price</th>
+                <th scope="col">Net Price</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let list of (priceList$ | async)">
+              <tr *ngIf="list.RoomType === item.RoomType">
+                <td>{{list.PricelistID}}</td>
+                <td>{{list.StartPeriod}}</td>
+                <td>{{list.EndPeriod}}</td>
+                <td>{{list.Price}}</td>
+                <td>{{list.NetPrice}}</td>
+              </tr>
+              </tbody>
+            </table>
+
+
+      </div>
+    </div>
+    <!--İptal tablosu-->
+    <div class="row mt-4" *ngIf="cancelStatus">
+      <div class="col-md-12 d-flex justify-content-end">
+        <i class="icon-close" (click)="cancelStatusToggle()"></i>
+      </div>
+      <div class="col-md-12 alert alert-info">
+        {{ item.CancelPolicy }}
+      </div>
+    </div>
+      <!--Pricing Table-->
+      <div class="row mt-4" *ngIf="priceListStatus">
+        <div class="col-md-12 d-flex justify-content-end">
+          <i class="icon-close" (click)="priceListStatusToggle()"></i>
+        </div>
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Tarih</th>
+              <th scope="col">Açıklama</th>
+              <th scope="col">Fiyat</th>
+              <th scope="col">Net Fiyat</th>
+              <th scope="col">İndirim</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let price of (pricingTable$ | async)">
+            <tr *ngIf="price.RoomType === item.RoomType">
+              <td>{{price.Date}}</td>
+              <td>{{price.Description}}</td>
+              <td>{{price.Price}}</td>
+              <td>{{price.NetPrice}}</td>
+              <td>{{price.Discount}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--Taksit Seçenekleri-->
+      <div class="row mt-4" *ngIf="installmentStatus">
+        <div class="col-md-12 d-flex justify-content-end">
+          <i class="icon-close" (click)="installementStatusToggle()"></i>
+        </div>
+        <div class="col-md-6">
+          <div class=" alert alert-info d-flex justify-content-center"><img
+            src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/cardfinans.png"></div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Taksit</th>
+              <th scope="col">İndirim Oranı</th>
+              <th scope="col">Taksit Tutarı</th>
+              <th scope="col">Toplam Tutar</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let installment of (installment$ | async)">
+            <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Finansbank'">
+              <td>{{installment.Taksit}}</td>
+              <td>{{installment["İndirim Oranı"]}}</td>
+              <td>{{installment["Taksit Tutarı"]}}</td>
+              <td>{{installment["Toplam Tutar"]}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <div class="alert alert-warning d-flex justify-content-center"><img
+            src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/axess.png"></div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Taksit</th>
+              <th scope="col">İndirim Oranı</th>
+              <th scope="col">Taksit Tutarı</th>
+              <th scope="col">Toplam Tutar</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let installment of (installment$ | async)">
+            <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Axess'">
+              <td>{{installment.Taksit}}</td>
+              <td>{{installment["İndirim Oranı"]}}</td>
+              <td>{{installment["Taksit Tutarı"]}}</td>
+              <td>{{installment["Toplam Tutar"]}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <div class="alert alert-warning d-flex justify-content-center"><img
+            src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/paraf.png"></div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Taksit</th>
+              <th scope="col">İndirim Oranı</th>
+              <th scope="col">Taksit Tutarı</th>
+              <th scope="col">Toplam Tutar</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let installment of (installment$ | async)">
+            <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Paraf'">
+              <td>{{installment.Taksit}}</td>
+              <td>{{installment["İndirim Oranı"]}}</td>
+              <td>{{installment["Taksit Tutarı"]}}</td>
+              <td>{{installment["Toplam Tutar"]}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-6">
+          <div class="alert alert-warning d-flex justify-content-center"><img
+            src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/world.png"></div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Taksit</th>
+              <th scope="col">İndirim Oranı</th>
+              <th scope="col">Taksit Tutarı</th>
+              <th scope="col">Toplam Tutar</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let installment of (installment$ | async)">
+            <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'World'">
+              <td>{{installment.Taksit}}</td>
+              <td>{{installment["İndirim Oranı"]}}</td>
+              <td>{{installment["Taksit Tutarı"]}}</td>
+              <td>{{installment["Toplam Tutar"]}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-6">
+          <div class="alert alert-warning d-flex justify-content-center"><img
+            src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/maximum.png"></div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Taksit</th>
+              <th scope="col">İndirim Oranı</th>
+              <th scope="col">Taksit Tutarı</th>
+              <th scope="col">Toplam Tutar</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let installment of (installment$ | async)">
+            <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Maximum'">
+              <td>{{installment.Taksit}}</td>
+              <td>{{installment["İndirim Oranı"]}}</td>
+              <td>{{installment["Taksit Tutarı"]}}</td>
+              <td>{{installment["Toplam Tutar"]}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-6">
+          <div class="alert alert-warning d-flex justify-content-center"><img
+            src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/ziraat.png"></div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Taksit</th>
+              <th scope="col">İndirim Oranı</th>
+              <th scope="col">Taksit Tutarı</th>
+              <th scope="col">Toplam Tutar</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let installment of (installment$ | async)">
+            <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Ziraatbank'">
+              <td>{{installment.Taksit}}</td>
+              <td>{{installment["İndirim Oranı"]}}</td>
+              <td>{{installment["Taksit Tutarı"]}}</td>
+              <td>{{installment["Toplam Tutar"]}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-md-6">
+          <div class="alert alert-warning d-flex justify-content-center"><img
+            src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/bonus.png"></div>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Taksit</th>
+              <th scope="col">İndirim Oranı</th>
+              <th scope="col">Taksit Tutarı</th>
+              <th scope="col">Toplam Tutar</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let installment of (installment$ | async)">
+            <tr *ngIf="installment.RoomType === item.RoomType && installment.Bank === 'Bonus'">
+              <td>{{installment.Taksit}}</td>
+              <td>{{installment["İndirim Oranı"]}}</td>
+              <td>{{installment["Taksit Tutarı"]}}</td>
+              <td>{{installment["Toplam Tutar"]}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
   </div>
 </div>
-<div class="alert alert-info" *ngIf="(girisTarihi$ | async) === ''">
-  Oda bilgilerini Görmek için lütfen Tarih Seçiniz
+<div *ngIf="(girisTarihi$ | async) === ''">
+  <div id="caption" class="hidden-xs">
+    <h1>sunis kumkoy beach hotel</h1>
+  </div>
 </div>

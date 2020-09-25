@@ -21,6 +21,9 @@
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px) {
+  .hidden-xs {
+    display: none;
+  }
 ul#lang_mobile{
 	list-style:none;
 	margin:0;
