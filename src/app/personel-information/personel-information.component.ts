@@ -11,6 +11,8 @@ import {ShoppingCartModel} from '../../Models/shoppingCart.model';
 import {EkstraHizmetState} from '../../states/ekstraHizmet.state';
 import {EkstraHizmetModel} from '../../Models/ekstraHizmet.model';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {CreditCardControlService} from '../services/credit-card-control.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-kisisel-bilgiler',
@@ -43,7 +45,12 @@ export class PersonelInformationComponent implements OnInit {
   costumerInformation = this.fb.array([]);
   childrenInformation = this.fb.array([]);
 
-  constructor(private store: Store, private modalService: NgbModal, private fb: FormBuilder) { }
+  constructor(private store: Store,
+              private modalService: NgbModal,
+              private fb: FormBuilder,
+              private creditCardControlService: CreditCardControlService,
+              private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.konaklamaBilgileri$.subscribe(value => {
@@ -63,7 +70,7 @@ export class PersonelInformationComponent implements OnInit {
     this.modalService.open(longContent, { scrollable: true });
   }
   hizmetEkle() {
-    this.store.dispatch(new AddEkstraHizmet({hizmetAdi: 'Oda İptal Garantisi', fiyat: 35}));
+    this.store.dispatch(new AddEkstraHizmet({hizmetAdi: 'Oda İptal Garantisi', fiyat: parseFloat('35')}));
   }
   get sepetTutari() {
     this.tutar = 0;
@@ -78,6 +85,12 @@ export class PersonelInformationComponent implements OnInit {
   onSubmit() {
     console.log(this.personelInformation.value);
     console.log(this.costumerInformation.value);
+  }
+  paymentCheck() {
+    if (this.creditCardControlService
+      .controlCreditCart(this.payInformation, this.personelInformation, this.childrenInformation, this.costumerInformation)) {
+      this.router.navigateByUrl('/check');
+    }
   }
 
 

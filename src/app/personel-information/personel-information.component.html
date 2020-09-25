@@ -244,7 +244,7 @@
               </div>
             </div>
             <hr>
-            <button class="btn btn-outline-success offset-7" routerLink="/check" [disabled]="!payInformation.valid"><i class="fa fa-credit-card"></i>Ödeme Yap</button>
+            <button class="btn btn-outline-success offset-7" [disabled]="!payInformation.valid" (click)="paymentCheck()"><i class="fa fa-credit-card"></i>Ödeme Yap</button>
           </div>
         </form>
       </div>

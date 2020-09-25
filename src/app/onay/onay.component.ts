@@ -12,6 +12,7 @@ import {ShoppingCartModel} from '../../Models/shoppingCart.model';
 import {EkstraHizmetState} from '../../states/ekstraHizmet.state';
 import {EkstraHizmetModel} from '../../Models/ekstraHizmet.model';
 import {ShoppingCartState} from '../../states/shoppingCart.state';
+import {CreditCardControlService} from '../services/credit-card-control.service';
 
 @Component({
   selector: 'app-onay',
