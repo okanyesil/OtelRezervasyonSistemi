@@ -15,7 +15,8 @@ const routes: Routes = [
   {path: 'check', component: OnayComponent},
   {path: '', component: ContentComponent},
   {path: 'car', component: CarComponent},
-  {path: 'flight', component: FlightComponent}
+  {path: 'flight', component: FlightComponent},
+  {path: '**', component: ContentComponent}
 ];
 
 @NgModule({

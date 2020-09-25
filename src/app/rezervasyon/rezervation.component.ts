@@ -12,10 +12,10 @@ import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-rezervasyon',
-  templateUrl: './rezervasyon.component.html',
-  styleUrls: ['./rezervasyon.component.css']
+  templateUrl: './rezervation.component.html',
+  styleUrls: ['./rezervation.component.css']
 })
-export class RezervasyonComponent implements OnInit {
+export class RezervationComponent implements OnInit {
   @Select(HotelState.getHotel)
   hotelDetail$: Observable<HotelInfo>;
   firtDate: any;
@@ -61,10 +61,12 @@ export class RezervasyonComponent implements OnInit {
     return this.hotelDetail$.pipe(map(value => value.SupportTime));
   }
   arttir() {
+    this.childrenCount(this.children);
     if (isNaN(this.children)) {
       this.children = 0;
     }
     this.children += 1;
+    this.childrenCount(this.children);
   }
   azalt() {
     if (isNaN(this.children)) {
@@ -73,6 +75,7 @@ export class RezervasyonComponent implements OnInit {
     if (this.children !== 0) {
       this.children -= 1;
     }
+    this.childrenCount(this.children);
   }
   adultArttir() {
     if (isNaN(this.adult)) {

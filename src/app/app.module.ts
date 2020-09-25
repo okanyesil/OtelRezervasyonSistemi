@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RezervasyonComponent } from './rezervasyon/rezervasyon.component';
+import { RezervationComponent } from './rezervasyon/rezervation.component';
 import { ShoppingCartComponent } from './shoppingCart/shopping-cart.component';
 import { ContentComponent } from './content/content.component';
 import { PersonelInformationComponent } from './personel-information/personel-information.component';
@@ -47,7 +47,7 @@ import {HotelService} from './services/hotel.service';
   declarations: [
     AppComponent,
     NavbarComponent,
-    RezervasyonComponent,
+    RezervationComponent,
     ShoppingCartComponent,
     ContentComponent,
     PersonelInformationComponent,

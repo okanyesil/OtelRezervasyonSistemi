@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {map, shareReplay, take, tap} from 'rxjs/operators';
+import {map, tap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {HotelInfo} from '../../Models/hotelInfo';
 import {Select, Store} from '@ngxs/store';
@@ -16,6 +16,7 @@ import {GetHotelInfo} from '../../actions/hotel.action';
 export class NavbarComponent implements OnInit {
   @Select(HotelState.getHotel)
   hotelDetail$: Observable<HotelInfo>;
+  sepetStatus = false;
   constructor(private store: Store) { }
  // shareReplay(1) sonsuz döngüyü engeller
   ngOnInit(): void {
@@ -32,6 +33,13 @@ export class NavbarComponent implements OnInit {
   }
   get hotelSupportTime$() {
     return this.hotelDetail$.pipe(map(value => value.SupportTime));
+  }
+  toggleSepetStatus() {
+    if(this.sepetStatus === false) {
+      this.sepetStatus = true;
+    } else {
+      this.sepetStatus = false;
+    }
   }
 
 
