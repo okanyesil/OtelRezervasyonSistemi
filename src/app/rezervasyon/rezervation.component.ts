@@ -7,6 +7,7 @@ import {HotelState} from '../../states/hotel.state';
 import {Observable} from 'rxjs';
 import {HotelInfo} from '../../Models/hotelInfo';
 import {map} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 
 
@@ -24,8 +25,9 @@ export class RezervationComponent implements OnInit {
   model: NgbDateStruct;
   children: number;
   adult: number;
+  currentPage = 'Oda Seçimi';
   childrenAgeInformation = this.fb.array([]);
-  constructor(private store: Store, private fb: FormBuilder) {
+  constructor(private store: Store, private fb: FormBuilder, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -89,6 +91,22 @@ export class RezervationComponent implements OnInit {
     }
     if (this.adult !== 0) {
       this.adult -= 1;
+    }
+  }
+  next() {
+    if (this.currentPage === 'Oda Seçimi') {
+      this.currentPage = 'Kişisel Bilgiler';
+      this.router.navigateByUrl('/personel-information');
+    }
+    if (this.currentPage === 'Kişisel Bilgier') {
+      this.currentPage = 'Oda Seçimi';
+      this.router.navigateByUrl('/content');
+    }
+  }
+  prev() {
+    if (this.currentPage === 'Kişisel Bilgiler') {
+      this.currentPage = 'Oda Seçimi';
+      this.router.navigateByUrl('/content');
     }
   }
 

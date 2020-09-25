@@ -46,9 +46,9 @@
           <strong>Or call us <a href="tel://{{hotelPhone$ | async}}">{{hotelPhone$ | async}}</a></strong>
         </div><!-- end bottom-wizard -->
         <div class="d-flex justify-content-center mt-2">
-          <button type="button" name="backward" class="backward" routerLink="/content"></button>
-          <span>Oda Seçimi</span>
-          <button type="button" name="forward" class="forward" routerLink="/personel-information"></button>
+          <button type="button" name="backward" *ngIf="currentPage !== 'Oda Seçimi'" class="backward" (click)="prev()"></button>
+          <span>{{currentPage}}</span>
+          <button type="button" name="forward" class="forward" (click)="next()"></button>
         </div>
       </form>
 
