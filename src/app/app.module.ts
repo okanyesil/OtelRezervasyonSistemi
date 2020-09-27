@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RezervationComponent } from './rezervasyon/rezervation.component';
+import { RezervationComponent } from './rezervation/rezervation.component';
 import { ShoppingCartComponent } from './shoppingCart/shopping-cart.component';
 import { ContentComponent } from './content/content.component';
 import { PersonelInformationComponent } from './personel-information/personel-information.component';
@@ -41,6 +41,7 @@ import {RoomListResolver} from '../resolvers/roomList.resolver';
 import {PricingTableState} from '../states/PricingTable.state';
 import {PricingTableResolver} from '../resolvers/pricingTable.resolver';
 import {HotelService} from './services/hotel.service';
+import { TransportationComponent } from './transportation/transportation.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import {HotelService} from './services/hotel.service';
     PersonelInformationComponent,
     OnayComponent,
     CarComponent,
-    FlightComponent
+    FlightComponent,
+    TransportationComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import {HotelResolver} from '../resolvers/hotel.resolver';
 import {ShoppingCartResolver} from '../resolvers/shoppingCart.resolver';
 import {CarComponent} from './car/car.component';
 import {FlightComponent} from './flight/flight.component';
+import {TransportationComponent} from './transportation/transportation.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: '', component: ContentComponent},
   {path: 'car', component: CarComponent},
   {path: 'flight', component: FlightComponent},
+  {path: 'transportation', component: TransportationComponent},
   {path: '**', component: ContentComponent}
 ];
 

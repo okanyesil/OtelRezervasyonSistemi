@@ -95,18 +95,26 @@ export class RezervationComponent implements OnInit {
   }
   next() {
     if (this.currentPage === 'Oda Seçimi') {
-      this.currentPage = 'Kişisel Bilgiler';
-      this.router.navigateByUrl('/personel-information');
+      this.currentPage = 'Transfer';
+      this.router.navigateByUrl('/transportation').then(r => r);
     }
-    if (this.currentPage === 'Kişisel Bilgier') {
+    else if (this.currentPage === 'Transfer') {
+      this.currentPage = 'Kişisel Bilgier';
+      this.router.navigateByUrl('/personel-information').then(r => r);
+    }
+    else {
       this.currentPage = 'Oda Seçimi';
-      this.router.navigateByUrl('/content');
+      this.router.navigateByUrl('/content').then(r => r);
     }
   }
   prev() {
-    if (this.currentPage === 'Kişisel Bilgiler') {
+    if (this.currentPage === 'Transfer') {
       this.currentPage = 'Oda Seçimi';
-      this.router.navigateByUrl('/content');
+      this.router.navigateByUrl('/content').then(r => r);
+    }
+    else if (this.currentPage === 'Kişisel Bilgier') {
+      this.currentPage = 'Transfer';
+      this.router.navigateByUrl('/transportation').then();
     }
   }
 
