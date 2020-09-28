@@ -1,6 +1,5 @@
 <div *ngFor="let item of (roomList$ | async)">
-
-  <div class="container-fluid shadow mt-5" *ngIf="(girisTarihi$ | async) !== '' || (departureDate$ | async)">
+  <div class="container-fluid shadow mt-5">
     <div class="row">
       <div class="col-12 col-xl-6">
         <ngb-carousel>
@@ -43,17 +42,17 @@
       </div>
     </div>
     <div class="row mt-2" *ngIf="status">
-      <div class="col-6 col-md-3">
-        <button class="btn btn-outline-secondary" (click)="availibilityStatusToggle()">Müsaitlik</button>
+      <div class="col-6 col-md-3 ">
+        <button class="btn btn-outline-secondary esitle" (click)="availibilityStatusToggle()">Müsaitlik</button>
+      </div>
+      <div class="col-6 col-md-3 ">
+        <button class="btn btn-outline-secondary esitle" (click)="cancelStatusToggle()">İptal Koşulları</button>
       </div>
       <div class="col-6 col-md-3">
-        <button class="btn btn-outline-secondary" (click)="cancelStatusToggle()">İptal Koşulları</button>
+        <button class="btn btn-outline-secondary esitle" (click)="priceListStatusToggle()">Fiyat Tablosu</button>
       </div>
       <div class="col-6 col-md-3">
-        <button class="btn btn-outline-secondary" (click)="priceListStatusToggle()">Fiyat Tablosu</button>
-      </div>
-      <div class="col-6 col-md-3">
-        <button class="btn btn-outline-secondary" (click)="installementStatusToggle()">Taksit Seçenekleri</button>
+        <button class="btn btn-outline-secondary esitle" (click)="installementStatusToggle()">Taksit Seçenekleri</button>
       </div>
     </div>
     <!--Müsaitlik Tablosu-->
@@ -61,7 +60,7 @@
       <div class="col-md-12 d-flex justify-content-end">
         <i class="icon-close" (click)="availibilityStatusToggle()"></i>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12 table-responsive">
             <table class="table table-striped">
               <thead>
               <tr>
@@ -100,7 +99,7 @@
         <div class="col-md-12 d-flex justify-content-end">
           <i class="icon-close" (click)="priceListStatusToggle()"></i>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 table-responsive">
           <table class="table table-striped">
             <thead>
             <tr>
@@ -128,7 +127,7 @@
         <div class="col-md-12 d-flex justify-content-end">
           <i class="icon-close" (click)="installementStatusToggle()"></i>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 table-responsive">
           <div class=" alert alert-info d-flex justify-content-center"><img
             src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/cardfinans.png"></div>
           <table class="table table-striped">
@@ -150,7 +149,7 @@
             </tbody>
           </table>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 table-responsive">
           <div class="alert alert-warning d-flex justify-content-center"><img
             src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/axess.png"></div>
           <table class="table table-striped">
@@ -172,7 +171,7 @@
             </tbody>
           </table>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 table-responsive">
           <div class="alert alert-warning d-flex justify-content-center"><img
             src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/paraf.png"></div>
           <table class="table table-striped">
@@ -195,7 +194,7 @@
           </table>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 table-responsive">
           <div class="alert alert-warning d-flex justify-content-center"><img
             src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/world.png"></div>
           <table class="table table-striped">
@@ -218,7 +217,7 @@
           </table>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 table-responsive">
           <div class="alert alert-warning d-flex justify-content-center"><img
             src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/maximum.png"></div>
           <table class="table table-striped">
@@ -241,7 +240,7 @@
           </table>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 table-responsive">
           <div class="alert alert-warning d-flex justify-content-center"><img
             src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/ziraat.png"></div>
           <table class="table table-striped">
@@ -264,7 +263,7 @@
           </table>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 table-responsive">
           <div class="alert alert-warning d-flex justify-content-center"><img
             src="https://suniskumkoybeachhotel.orsmod.com/newfrontend/assets/img/cards/bonus.png"></div>
           <table class="table table-striped">
@@ -289,8 +288,4 @@
       </div>
   </div>
 </div>
-<div *ngIf="(girisTarihi$ | async) === ''">
-  <div id="caption" class="hidden-xs">
-    <h1>sunis kumkoy beach hotel</h1>
-  </div>
-</div>
+

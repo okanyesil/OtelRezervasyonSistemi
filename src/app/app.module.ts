@@ -10,7 +10,7 @@ import { RezervationComponent } from './rezervation/rezervation.component';
 import { ShoppingCartComponent } from './shoppingCart/shopping-cart.component';
 import { ContentComponent } from './content/content.component';
 import { PersonelInformationComponent } from './personel-information/personel-information.component';
-import { OnayComponent } from './onay/onay.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -52,7 +52,7 @@ import { TransportationComponent } from './transportation/transportation.compone
     ShoppingCartComponent,
     ContentComponent,
     PersonelInformationComponent,
-    OnayComponent,
+    ConfirmationComponent,
     CarComponent,
     FlightComponent,
     TransportationComponent

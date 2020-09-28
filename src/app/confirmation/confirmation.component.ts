@@ -16,10 +16,10 @@ import {CreditCardControlService} from '../services/credit-card-control.service'
 
 @Component({
   selector: 'app-onay',
-  templateUrl: './onay.component.html',
-  styleUrls: ['./onay.component.css']
+  templateUrl: './confirmation.component.html',
+  styleUrls: ['./confirmation.component.css']
 })
-export class OnayComponent implements OnInit {
+export class ConfirmationComponent implements OnInit {
   @Select(HotelState.getHotel)
   hotelDetail$: Observable<HotelInfo>;
   @Select(KonaklamaBilgileriState.getKonaklama)
